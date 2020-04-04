@@ -51,7 +51,7 @@ min(Municipios$Densidade)
 max(Municipios$Populacao)-min(Municipios$Populacao)
 # Amplitude Area
 max(Municipios$Area)-min(Municipios$Area)
-# Amplitude Densidade
+# Amplitude Densidade 2601 habitantes por km**
 max(Municipios$Densidade)-min(Municipios$Densidade)
 
 #Desvio-Padrao
@@ -68,6 +68,20 @@ var(Municipios$Densidade)
 sd(Municipios$Populacao)/mean(Municipios$Populacao)
 sd(Municipios$Area)/mean(Municipios$Area)
 sd(Municipios$Densidade)/mean(Municipios$Densidade)
+
+# Baixar o pacote "moments"
+install.packages("moments")
+library(moments)
+
+#Coeficiente de Assimetria
+skewness(Municipios$Populacao)
+skewness(Municipios$Area)
+skewness(Municipios$Densidade)
+
+#Coeficiente de Curtose
+kurtosis(Municipios$Populacao)
+kurtosis(Municipios$Area)
+kurtosis(Municipios$Densidade)
 
 #Existe pacotes que fazem o calculo geral para todas as Estatisticas
 # e preciso instalar o pacote "fBasics"
