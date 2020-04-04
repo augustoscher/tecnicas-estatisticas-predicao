@@ -47,30 +47,30 @@ max(Municipios$Densidade)
 min(Municipios$Populacao)
 min(Municipios$Area)
 min(Municipios$Densidade)
-# Amplitude Popula??o
-max(Municipios$Popula??o)-min(Municipios$Populacao)
-# Amplitude ?rea
-max(Municipios$Area)-min(MunicipiosArea)
+# Amplitude Populacao
+max(Municipios$Populacao)-min(Municipios$Populacao)
+# Amplitude Area
+max(Municipios$Area)-min(Municipios$Area)
 # Amplitude Densidade
 max(Municipios$Densidade)-min(Municipios$Densidade)
 
-#Desvio-Padr?o
+#Desvio-Padrao
 sd(Municipios$Populacao)
 sd(Municipios$Area)
 sd(Municipios$Densidade)
 
-#Vari?ncia
+#Variancia
 var(Municipios$Populacao)
 var(Municipios$Area)
 var(Municipios$Densidade)
 
-#Coeficiente de Vari?ncia
+#Coeficiente de Variancia
 sd(Municipios$Populacao)/mean(Municipios$Populacao)
 sd(Municipios$Area)/mean(Municipios$Area)
 sd(Municipios$Densidade)/mean(Municipios$Densidade)
 
-#Existe pacotes que fazem o c?lculo geral para todas as Estat?sticas
-# ? preciso instalar o pacote "fBasics"
+#Existe pacotes que fazem o calculo geral para todas as Estatisticas
+# e preciso instalar o pacote "fBasics"
 library(fBasics) 
 basicStats(Municipios$Populacao)
 basicStats(Municipios$Area)
@@ -78,17 +78,17 @@ basicStats(Municipios$Densidade)
 
 #Histogramas
 hist(Municipios$Populacao,  breaks = 100, xlab="Populacao", ylab="")
-hist(Municipios$Area ,  breaks = 50, xlab="?rea", ylab="")
+hist(Municipios$Area ,  breaks = 50, xlab="area", ylab="")
 hist(Municipios$Densidade ,  breaks = 500, xlab="Densidade", ylab="")
 
-# Normaliza??o pelo Logaritmo
-# Aplicando o log sobre as vari?veis de popula??o
+# Normalizacao pelo Logaritmo
+# Aplicando o log sobre as variaveis de Populacao
 
-ln_Pop=log(Municipios$Popula??o)
-hist(ln_Pop,  breaks = 10, xlab="Popula??o", ylab="")
+ln_Pop=log(Municipios$Populacao)
+hist(ln_Pop,  breaks = 10, xlab="Populacao", ylab="")
 
 ln_Area=log(Municipios$Area)
-hist(ln_Area,  breaks = 10, xlab="Popula??o", ylab="")
+hist(ln_Area,  breaks = 10, xlab="Populacao", ylab="")
 
 ln_Dens=log(Municipios$Densidade)
-hist(ln_Dens,  breaks = 10, xlab="Popula??o", ylab="")
+hist(ln_Dens,  breaks = 10, xlab="Populacao", ylab="")
