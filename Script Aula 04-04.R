@@ -4,90 +4,91 @@
 #
 # ______________________________________________
 
-#1 Primeiro passo - Mudar o diretório
+#1 Primeiro passo - Mudar o diret?rio
+setwd('~/git/rep/tecnicas-estatisticas-predicao')
 
 #2 Baixar o banco de dados
-#   Neste caso será um arquivo ".csv"
+#   Neste caso sera um arquivo ".csv"
 
 Municipios<-read.csv("Municipios_SC.csv", sep=";", dec=",", header=T)
 
-#3 buscar o nome das variáveis da base de dados
+#3 buscar o nome das variaveis da base de dados
 names(Municipios)
 
-#4 calcular a média para a variável peso
-mean(Municipios$População)
-mean(Municipios$Área)
+#4 calcular a media para a variavel peso
+mean(Municipios$Populacao)
+mean(Municipios$Area)
 mean(Municipios$Densidade)
 
-#5 calcular a mediana para a variável peso
-median(Municipios$População)
-median(Municipios$Área)
+#5 calcular a mediana para a variavel peso
+median(Municipios$Populacao)
+median(Municipios$Area)
 median(Municipios$Densidade)
 
-#6 gerar uma estatística geral da variável peso  
-summary(Municipios$População)
-summary(Municipios$Área)
+#6 gerar uma estatistica geral da vari?vel peso  
+summary(Municipios$Populacao)
+summary(Municipios$Area)
 summary(Municipios$Densidade)
 
-# Alternativa para o "Run" é "Ctrl + Enter"
+# Alternativa para o "Run" e "Ctrl + Enter"
 
 
 #7 Para calcular os percentis
-#os valores internos ao vetor c, indicam as proporções dos percentis
-quantile(Municipios$População, c(0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95))
-quantile(Municipios$Área, c(0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95))
+#os valores internos ao vetor c, indicam as proporcoes dos percentis
+quantile(Municipios$Populacao, c(0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95))
+quantile(Municipios$Area, c(0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95))
 quantile(Municipios$Densidade, c(0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95))
 
-#8 Medidas de dispersão
+#8 Medidas de dispersao
 #Amplitude
-max(Municipios$População)
-max(Municipios$Área)
+max(Municipios$Populacao)
+max(Municipios$Area)
 max(Municipios$Densidade)
-min(Municipios$População)
-min(Municipios$Área)
+min(Municipios$Populacao)
+min(Municipios$Area)
 min(Municipios$Densidade)
-# Amplitude População
-max(Municipios$População)-min(Municipios$População)
-# Amplitude Área
-max(Municipios$Área)-min(Municipios$Área)
+# Amplitude Popula??o
+max(Municipios$Popula??o)-min(Municipios$Populacao)
+# Amplitude ?rea
+max(Municipios$Area)-min(MunicipiosArea)
 # Amplitude Densidade
 max(Municipios$Densidade)-min(Municipios$Densidade)
 
-#Desvio-Padrão
-sd(Municipios$População)
-sd(Municipios$Área)
+#Desvio-Padr?o
+sd(Municipios$Populacao)
+sd(Municipios$Area)
 sd(Municipios$Densidade)
 
-#Variância
-var(Municipios$População)
-var(Municipios$Área)
+#Vari?ncia
+var(Municipios$Populacao)
+var(Municipios$Area)
 var(Municipios$Densidade)
 
-#Coeficiente de Variância
-sd(Municipios$População)/mean(Municipios$População)
-sd(Municipios$Área)/mean(Municipios$Área)
+#Coeficiente de Vari?ncia
+sd(Municipios$Populacao)/mean(Municipios$Populacao)
+sd(Municipios$Area)/mean(Municipios$Area)
 sd(Municipios$Densidade)/mean(Municipios$Densidade)
 
-#Existe pacotes que fazem o cálculo geral para todas as Estatísticas
-# é preciso instalar o pacote "fBasics"
+#Existe pacotes que fazem o c?lculo geral para todas as Estat?sticas
+# ? preciso instalar o pacote "fBasics"
 library(fBasics) 
-basicStats(Municipios$População)
-basicStats(Municipios$Área)
+basicStats(Municipios$Populacao)
+basicStats(Municipios$Area)
 basicStats(Municipios$Densidade)
 
 #Histogramas
-hist(Municipios$População,  breaks = 100, xlab="População", ylab="")
-hist(Municipios$Área ,  breaks = 50, xlab="Área", ylab="")
+hist(Municipios$Populacao,  breaks = 100, xlab="Populacao", ylab="")
+hist(Municipios$Area ,  breaks = 50, xlab="?rea", ylab="")
 hist(Municipios$Densidade ,  breaks = 500, xlab="Densidade", ylab="")
 
-# Normalização pelo Logaritmo
-# Aplicando o log sobre as variáveis de população
+# Normaliza??o pelo Logaritmo
+# Aplicando o log sobre as vari?veis de popula??o
 
-ln_Pop=log(Municipios$População)
-hist(ln_Pop,  breaks = 10, xlab="População", ylab="")
+ln_Pop=log(Municipios$Popula??o)
+hist(ln_Pop,  breaks = 10, xlab="Popula??o", ylab="")
 
-ln_Area=log(Municipios$Área)
-hist(ln_Area,  breaks = 10, xlab="População", ylab="")
+ln_Area=log(Municipios$Area)
+hist(ln_Area,  breaks = 10, xlab="Popula??o", ylab="")
 
 ln_Dens=log(Municipios$Densidade)
-hist(ln_Dens,  breaks = 10, xlab="População", ylab="")
+hist(ln_Dens,  breaks = 10, xlab="Popula??o", ylab="")
