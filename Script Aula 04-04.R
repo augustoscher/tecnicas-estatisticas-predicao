@@ -10,7 +10,7 @@ setwd('~/git/rep/tecnicas-estatisticas-predicao')
 #2 Baixar o banco de dados
 #   Neste caso sera um arquivo ".csv"
 
-Municipios<-read.csv("Municipios_SC.csv", sep=";", dec=",", header=T)
+Municipios<-read.csv("Municipios_RS.csv", sep=";", dec=",", header=T)
 
 #3 buscar o nome das variaveis da base de dados
 names(Municipios)
