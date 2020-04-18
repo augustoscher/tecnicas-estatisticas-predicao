@@ -1,34 +1,34 @@
-# Antes de come�ar, lembrar de mudar o diret�rio
-# use o getwd() para saber o diret�rio atual, e
-# use o setwd() para definir o novo endere�o
+# Antes de começar, lembrar de mudar o diretório
+# use o getwd() para saber o diretório atual, e
+# use o setwd() para definir o novo endereço
 
 getwd()
-setwd("C:/Users/mmrodrigues/OneDrive - FURB/PPGBio/Aula 5")
+setwd('~/git/rep/tecnicas-estatisticas-predicao')
 
-# Para essa aula ser�o usados dos dados na form .csv
+# Para essa aula serão usados dos dados na form .csv
 
 # Exemplo Separatrizes
   indEmpresas <- read.csv("Exemplo Separatrizes.csv", header = TRUE, sep = ";", dec = ",")
 
-# Visualiza��o do Banco de Dados
+# Visualização do Banco de Dados
   View(indEmpresas)
   names(indEmpresas)
 
-# Estat�sticas Descritivas B�sicas
+# Estatasticas Descritivas Basicas
   
   # Para Liquidez Geral
     summary(indEmpresas$LG)
   
-  # Para Imobiliza��o do Patrim�nio L�quido
+  # Para Imobilização do Patrimonio Liquido
     summary(indEmpresas$Imb_PL)
   
-  # Para Participa��o do Capital de Terceiros
+  # Para Participacao do Capital de Terceiros
     summary(indEmpresas$Part_CT)
  
   # Para Giro do Ativo
     summary(indEmpresas$GA)
     
-  # Para Margem L�quida
+  # Para Margem Liquida
     summary(indEmpresas$ML)
     
   # Para Retorno Sobre Ativos
@@ -37,20 +37,20 @@ setwd("C:/Users/mmrodrigues/OneDrive - FURB/PPGBio/Aula 5")
   # Para Retorno Sobre PL
     summary(indEmpresas$ROE)
 
-#Medidas de dispers�o
+#Medidas de dispersao
   # Para Liquidez Geral
     sd(indEmpresas$LG)
     
-  # Para Imobiliza��o do Patrim�nio L�quido
+  # Para Imobilizacao do Patrimonio Liquido
     sd(indEmpresas$Imb_PL)
     
-  # Para Participa��o do Capital de Terceiros
+  # Para Participacaoo do Capital de Terceiros
     sd(indEmpresas$Part_CT)
     
   # Para Giro do Ativo
     sd(indEmpresas$GA)
     
-  # Para Margem L�quida
+  # Para Margem Liquida
     sd(indEmpresas$ML)
     
   # Para Retorno Sobre Ativos
